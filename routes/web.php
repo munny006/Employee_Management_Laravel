@@ -21,3 +21,8 @@ Route::get('/', function () {
 Route::get('/admin','AdminController@index');
 Route::get('/admin/login','AdminController@login');
 Route::post('/admin/login','AdminController@submit_login');
+Route::get('/admin/logout','AdminController@logout');
+
+
+//department
+Route::resource('/depart','DepartmentController');

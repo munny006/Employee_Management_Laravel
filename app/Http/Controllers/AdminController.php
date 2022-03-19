@@ -28,4 +28,8 @@ if($checkadmin > 0){
 		return redirect('admin/login')->with('msg','Invaild Usrname/password');
 	}
 }
+public function logout(){
+	session()->forget('adminlogin');
+	return redirect('admin/login');
+}
 }
