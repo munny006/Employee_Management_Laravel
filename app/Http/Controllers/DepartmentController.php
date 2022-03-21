@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\MOdels\Department;
 class DepartmentController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class DepartmentController extends Controller
      */
     public function index()
     {
-        return view('department.index');
+        $data = Department::orderBy('id','desc')->get();
+        return view('department.index',['data'=>$data]);
     }
 
     /**
@@ -23,7 +24,7 @@ class DepartmentController extends Controller
      */
     public function create()
     {
-        //
+        return view('department.create');
     }
 
     /**

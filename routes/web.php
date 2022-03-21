@@ -25,4 +25,6 @@ Route::get('/admin/logout','AdminController@logout');
 
 
 //department
-Route::resource('/depart','DepartmentController');
+
+
+Route::resource('depart','DepartmentController');
