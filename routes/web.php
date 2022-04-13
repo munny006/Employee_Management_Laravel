@@ -26,5 +26,5 @@ Route::get('/admin/logout','AdminController@logout');
 
 //department
 
-
+Route::get('depart/{id}/delete',[App\Http\Controllers\DepartmentController::class,'destroy']);
 Route::resource('depart',DepartmentController::class);
