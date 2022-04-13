@@ -7,7 +7,7 @@
 <div class="card-header">
 <i class="fas fa-table me-1"></i>
 All Department
-<a href="{{ url('depart/create') }}" class="btn btn-success float-end">Add New</a>
+<a href="{{ url('depart/create') }}" class="btn btn-sm btn-primary float-end ">Add New</a>
 </div>
 <div class="card-body">
 <table id="datatablesSimple">
