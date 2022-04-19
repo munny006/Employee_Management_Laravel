@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\AdminController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,5 +28,10 @@ Route::get('/admin/logout','AdminController@logout');
 
 //department
 
-Route::get('depart/{id}/delete',[App\Http\Controllers\DepartmentController::class,'destroy']);
+Route::get('depart/{id}/delete','DepartmentController@destroy');
 Route::resource('depart',DepartmentController::class);
+
+//Employee
+
+Route::get('employee/{id}/delete','EmployeeController@destroy');
+Route::resource('employee',EmployeeController::class);
